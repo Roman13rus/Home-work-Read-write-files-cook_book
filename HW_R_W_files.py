@@ -19,7 +19,7 @@ def reader(files):# директорию файла подаем в виде а�
         return cook_book
 #print (reader('recipes.txt')) # для проверки с файлом 'recipes.txt'
 pprint.pprint (reader('recipes.txt'),width=50, sort_dicts=False)
-def order_formation(list_dish, person):#Используем функцию reader возвращающую готовый cook_book
+def get_shop_list_by_dishes(list_dish, person):#Используем функцию reader возвращающую готовый cook_book
     list_ingridient = {}
     person = int(person)
     for dish in list_dish:
@@ -38,4 +38,4 @@ def order_formation(list_dish, person):#Используем функцию read
                     }
     return list_ingridient
        
-pprint.pprint (order_formation(['Омлет','Утка по-пекински'], 4),width=50, sort_dicts=False)# для проверки
+pprint.pprint (get_shop_list_by_dishes(['Омлет','Утка по-пекински'], 4),width=50, sort_dicts=False)# для проверки
