@@ -1,3 +1,4 @@
+import pprint
 def reader(files):# директорию файла подаем в виде аргумента функции, что б можно было вызывать с любым файлом
     with open(files,'r',encoding='utf-8') as file:
         cook_book = {}
@@ -17,7 +18,7 @@ def reader(files):# директорию файла подаем в виде а�
             file.readline()
         return cook_book
 #print (reader('recipes.txt')) # для проверки с файлом 'recipes.txt'
-
+pprint.pprint (reader('recipes.txt'),width=50, sort_dicts=False)
 def order_formation(list_dish, person):#Используем функцию reader возвращающую готовый cook_book
     list_ingridient = {}
     person = int(person)
@@ -37,4 +38,4 @@ def order_formation(list_dish, person):#Используем функцию read
                     }
     return list_ingridient
        
-print(order_formation(['Омлет','Утка по-пекински'], 4))# для проверки
+pprint.pprint (order_formation(['Омлет','Утка по-пекински'], 4),width=50, sort_dicts=False)# для проверки
